@@ -1,2 +1,3 @@
 # browser-rotate
-Check browser rotation, and set different styles(css) for pages. And fix the keyboard up leads to rotate issue. 
+Check mobile browser rotation, and set different styles(css) for pages. 
+Fixed the keyboard up leads to render landscape issue. 
