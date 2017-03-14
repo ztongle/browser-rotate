@@ -11,42 +11,24 @@
             padding: 0;
         }
 
-        @media screen and (max-aspect-ratio: 13/9)
-        {
-            .landscape {
-                display: none;
-            }
-
-            .portrait {
-                width: 100%;
-                height: 90%;
-                padding-top: 10%;
-                background: blue;
-            }
-
-            .content {
-                width: 80%;
-                height: 30%;
-                display: block;
-                margin: 0 auto;
-            }
+       .portrait {
+            width: 100%;
+            height: 90%;
+            padding-top: 10%;
+            background: blue;
         }
 
-        @media screen and (min-aspect-ratio: 13/9)
-        {
-            .landscape {
-                width: 100%;
-                height: 100%;
-                background: red;
-            }
+        .content {
+            width: 80%;
+            height: 30%;
+            display: block;
+            margin: 0 auto;
+        }
 
-            .portrait {
-                display: none;
-            }
-
-            .content {
-                display: none;
-            }
+        .landscape {
+            width: 100%;
+            height: 100%;
+            background: red;
         }
 
         .hidden {
@@ -77,16 +59,21 @@
         function rotateToLandscape() {
             var landscape = document.getElementById('landscape');
             landscape.className = 'landscape';
+            var portrait = document.getElementById('portrait');
+            portrait.className = 'hidden';
+
         }
 
         function rotateToPortrait() {
             var landscape = document.getElementById('landscape');
             landscape.className = 'hidden';
+            var portrait = document.getElementById('portrait');
+            portrait.className = 'portrait';
         }
     </script>
 </head>
 <body>
-<div class="portrait">
+<div class="portrait" id="portrait">
 <textarea class="content" placeholder="pls input content"></textarea>
 </div>
 <div id="landscape">
